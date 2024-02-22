@@ -1,0 +1,27 @@
+<h1>Country App</h1>
+<div class="country">
+
+<div class="countries" *ngFor="let c of country">
+   <img src="{{c.media.flag}}" alt="{{c.name}}">
+   <h2>{{c.name}}</h2>
+   
+   <!-- A button to open the popup form -->
+   <button id="myBtn" (click)="OpenModal()">Details</button>
+
+   <!-- The Modal -->
+   <div id="myModal" class="modal">
+   
+     <!-- Modal content -->
+     <div class="modal-content">
+       <span class="close">&times;</span>
+       <h1>Capital: {{c.capital}}</h1>
+        <h2>Currency: {{c.currency}}</h2>
+        <h3>Population: {{c.population}}</h3>
+        <img style="height: 30px; width: 50px;" src="{{c.media.emblem}} alt={{c.name}}">
+        <h4>emblem</h4>
+     </div>
+   
+   </div>     
+    
+</div>
+</div>
